@@ -33,6 +33,8 @@ from karix.models.inline_response2006 import InlineResponse2006
 from karix.models.inline_response201 import InlineResponse201
 from karix.models.inline_response2011 import InlineResponse2011
 from karix.models.inline_response2012 import InlineResponse2012
+from karix.models.inline_response2013 import InlineResponse2013
+from karix.models.inline_response2014 import InlineResponse2014
 from karix.models.inline_response202 import InlineResponse202
 from karix.models.inline_response402 import InlineResponse402
 from karix.models.inline_response402_error import InlineResponse402Error
@@ -43,12 +45,14 @@ from karix.models.inline_response404_error import InlineResponse404Error
 from karix.models.inline_response500 import InlineResponse500
 from karix.models.inline_response500_error import InlineResponse500Error
 from karix.models.message import Message
+from karix.models.whatsapp_template import WhatsappTemplate
 from karix.models.message_channel_details import MessageChannelDetails
 from karix.models.message_channel_details_sms import MessageChannelDetailsSms
 from karix.models.message_channel_details_whatsapp import MessageChannelDetailsWhatsapp
 from karix.models.message_content import MessageContent
 from karix.models.message_content_location import MessageContentLocation
 from karix.models.message_error import MessageError
+from karix.models.whatsapp_template_error import WhatsappTemplateError
 from karix.models.meta_response import MetaResponse
 from karix.models.phone_number import PhoneNumber
 from karix.models.phone_number_rate import PhoneNumberRate

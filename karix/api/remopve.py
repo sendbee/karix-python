@@ -1,0 +1,1 @@
+uid=None, status=None, category=None, whatsapp_account_uid=None, name=None, language_code=None, attachment=None, text=None, rejected_reason=None,

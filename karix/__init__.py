@@ -21,6 +21,7 @@ from karix.api.message_api import MessageApi
 from karix.api.number_api import NumberApi
 from karix.api.number_search_api import NumberSearchApi
 from karix.api.webhook_api import WebhookApi
+from karix.api.whatsapp_api import WhatsappApi
 
 # import ApiClient
 from karix.api_client import ApiClient
