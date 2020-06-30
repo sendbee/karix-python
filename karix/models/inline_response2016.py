@@ -3,18 +3,18 @@ import re  # noqa: F401
 
 import six
 
+from karix.models.object_meta_response import ObjectMetaResponse  # noqa: F401,E501
 from karix.models.whatsapp_account import WhatsappAccount  # noqa: F401,E501
-from karix.models.array_meta_response import ArrayMetaResponse  # noqa: F401,E501
 
 
 class InlineResponse2016(object):
     swagger_types = {
-        'objects': 'list[WhatsappAccount]',
-        'meta': 'ArrayMetaResponse'
+        'meta': 'ObjectMetaResponse',
+        'data': 'WhatsappAccount'
     }
 
     attribute_map = {
-        'objects': 'objects',
+        'data': 'data',
         'meta': 'meta'
     }
 
