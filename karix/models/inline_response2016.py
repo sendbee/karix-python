@@ -18,13 +18,13 @@ class InlineResponse2016(object):
         'meta': 'meta'
     }
 
-    def __init__(self, objects=None, meta=None):  # noqa: E501
-        self._objects = None
+    def __init__(self, data=None, meta=None):  # noqa: E501
+        self._data = None
         self._meta = None
         self.discriminator = None
 
-        if objects is not None:
-            self.objects = objects
+        if data is not None:
+            self.data = data
         if meta is not None:
             self.meta = meta
 
