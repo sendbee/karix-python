@@ -35,6 +35,8 @@ from karix.models.inline_response2011 import InlineResponse2011
 from karix.models.inline_response2012 import InlineResponse2012
 from karix.models.inline_response2013 import InlineResponse2013
 from karix.models.inline_response2014 import InlineResponse2014
+from karix.models.inline_response2015 import InlineResponse2015
+from karix.models.inline_response2016 import InlineResponse2016
 from karix.models.inline_response202 import InlineResponse202
 from karix.models.inline_response402 import InlineResponse402
 from karix.models.inline_response402_error import InlineResponse402Error
