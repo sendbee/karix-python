@@ -243,9 +243,9 @@ class WhatsappApi(object):
     def get_whatsapp_account_by_id(self, uid, **kwargs):  # noqa: E501
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_whatsapp_templates_by_id_with_http_info(uid, **kwargs)  # noqa: E501
+            return self.get_whatsapp_account_by_id_with_http_info(uid, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_whatsapp_templates_by_id_with_http_info(uid, **kwargs)  # noqa: E501
+            (data) = self.get_whatsapp_account_by_id_with_http_info(uid, **kwargs)  # noqa: E501
             return data
 
     def get_whatsapp_account_by_id_with_http_info(self, uid, **kwargs):  # noqa: E501
