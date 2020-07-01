@@ -175,8 +175,7 @@ class WhatsappApi(object):
             return data
 
     def create_whatsapp_template_with_http_info(self, **kwargs):  # noqa: E501
-        all_params = ['api_version', 'category', 'whatsapp_account_uid',
-                      'name', 'language_code', 'attachment', 'text']  # noqa: E501
+        all_params = ['api_version', 'details']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
