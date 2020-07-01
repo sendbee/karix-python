@@ -46,8 +46,9 @@ class CreateWhatsappTemplate(object):
             self.name = name
         if language_code is not None:
             self.language_code = language_code
-        if attachment is not None:
-            self.attachment = attachment
+
+        self.attachment = attachment
+
         if text is not None:
             self.text = text
 
