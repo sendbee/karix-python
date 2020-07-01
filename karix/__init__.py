@@ -55,6 +55,7 @@ from karix.models.inline_response404_error import InlineResponse404Error
 from karix.models.inline_response500 import InlineResponse500
 from karix.models.inline_response500_error import InlineResponse500Error
 from karix.models.message import Message
+from karix.models.create_whatsapp_template import CreateWhatsappTemplate
 from karix.models.message_channel_details import MessageChannelDetails
 from karix.models.message_channel_details_sms import MessageChannelDetailsSms
 from karix.models.message_channel_details_whatsapp import MessageChannelDetailsWhatsapp

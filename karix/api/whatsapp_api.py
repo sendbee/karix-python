@@ -202,22 +202,12 @@ class WhatsappApi(object):
         if 'api_version' in params:
             header_params['api-version'] = params['api_version']  # noqa: E501
 
-        body_params = None
+        form_params = []
         local_var_files = {}
 
-        form_params = {}
-        if 'category' in params:
-            form_params['category'] = params['category']
-        if 'whatsapp_account_uid' in params:
-            form_params['whatsapp_account_uid'] = params['whatsapp_account_uid']
-        if 'name' in params:
-            form_params['name'] = params['name']
-        if 'language_code' in params:
-            form_params['language_code'] = params['language_code']
-        if 'attachment' in params:
-            form_params['attachment'] = params['attachment']
-        if 'text' in params:
-            form_params['text'] = params['text']
+        body_params = None
+        if 'details' in params:
+            body_params = params['details']
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
@@ -238,7 +228,7 @@ class WhatsappApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2014',  # noqa: E501
+            response_type='InlineResponse2011',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
