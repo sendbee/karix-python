@@ -202,22 +202,22 @@ class WhatsappApi(object):
         if 'api_version' in params:
             header_params['api-version'] = params['api_version']  # noqa: E501
 
-        form_params = []
+        body_params = None
         local_var_files = {}
 
-        body_params = {}
+        form_params = {}
         if 'category' in params:
-            body_params['category'] = params['category']
+            form_params['category'] = params['category']
         if 'whatsapp_account_uid' in params:
-            body_params['whatsapp_account_uid'] = params['whatsapp_account_uid']
+            form_params['whatsapp_account_uid'] = params['whatsapp_account_uid']
         if 'name' in params:
-            body_params['name'] = params['name']
+            form_params['name'] = params['name']
         if 'language_code' in params:
-            body_params['language_code'] = params['language_code']
+            form_params['language_code'] = params['language_code']
         if 'attachment' in params:
-            body_params['attachment'] = params['attachment']
+            form_params['attachment'] = params['attachment']
         if 'text' in params:
-            body_params['text'] = params['text']
+            form_params['text'] = params['text']
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
