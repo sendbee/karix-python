@@ -219,9 +219,6 @@ class WhatsappApi(object):
         if 'text' in params:
             body_params['text'] = params['text']
 
-        print(body_params)
-        return
-
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
