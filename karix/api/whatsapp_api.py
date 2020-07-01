@@ -205,19 +205,19 @@ class WhatsappApi(object):
         form_params = []
         local_var_files = {}
 
-        body_params = None
+        body_params = {}
         if 'category' in params:
-            body_params = params['category']
+            body_params['category'] = params['category']
         if 'whatsapp_account_uid' in params:
-            body_params = params['whatsapp_account_uid']
+            body_params['whatsapp_account_uid'] = params['whatsapp_account_uid']
         if 'name' in params:
-            body_params = params['name']
+            body_params['name'] = params['name']
         if 'language_code' in params:
-            body_params = params['language_code']
+            body_params['language_code'] = params['language_code']
         if 'attachment' in params:
-            body_params = params['attachment']
+            body_params['attachment'] = params['attachment']
         if 'text' in params:
-            body_params = params['text']
+            body_params['text'] = params['text']
 
         print(body_params)
         return
