@@ -7,7 +7,6 @@ import six
 class CreateWhatsappTemplate(object):
 
     swagger_types = {
-        'uid': 'str',
         'category': 'str',
         'whatsapp_account_uid': 'str',
         'name': 'str',
@@ -16,7 +15,6 @@ class CreateWhatsappTemplate(object):
         'text': 'str'
     }
     attribute_map = {
-        'uid': 'uid',
         'category': 'category',
         'whatsapp_account_uid': 'whatsapp_account_uid',
         'name': 'name',
@@ -25,10 +23,9 @@ class CreateWhatsappTemplate(object):
         'text': 'text'
     }
 
-    def __init__(self, uid=None, category=None, whatsapp_account_uid=None,
+    def __init__(self, category=None, whatsapp_account_uid=None,
                  name=None, language_code=None, attachment=None, text=None):
 
-        self._uid = None
         self._category = None
         self._whatsapp_account_uid = None
         self._name = None
@@ -36,29 +33,12 @@ class CreateWhatsappTemplate(object):
         self._attachment = None
         self._text = None
 
-        if uid is not None:
-            self.uid = uid
-        if category is not None:
-            self.category = category
-        if whatsapp_account_uid is not None:
-            self.whatsapp_account_uid = whatsapp_account_uid
-        if name is not None:
-            self.name = name
-        if language_code is not None:
-            self.language_code = language_code
-
+        self.category = category
+        self.whatsapp_account_uid = whatsapp_account_uid
+        self.name = name
+        self.language_code = language_code
         self.attachment = attachment
-
-        if text is not None:
-            self.text = text
-
-    @property
-    def uid(self):
-        return self._uid
-
-    @uid.setter
-    def uid(self, uid):
-        self._uid = uid
+        self.text = text
 
     @property
     def category(self):
