@@ -21,6 +21,7 @@ from karix.api.message_api import MessageApi
 from karix.api.number_api import NumberApi
 from karix.api.number_search_api import NumberSearchApi
 from karix.api.webhook_api import WebhookApi
+from karix.api.whatsapp_api import WhatsappApi
 
 # import ApiClient
 from karix.api_client import ApiClient
@@ -54,6 +55,7 @@ from karix.models.inline_response404_error import InlineResponse404Error
 from karix.models.inline_response500 import InlineResponse500
 from karix.models.inline_response500_error import InlineResponse500Error
 from karix.models.message import Message
+from karix.models.create_whatsapp_template import CreateWhatsappTemplate
 from karix.models.message_channel_details import MessageChannelDetails
 from karix.models.message_channel_details_sms import MessageChannelDetailsSms
 from karix.models.message_channel_details_whatsapp import MessageChannelDetailsWhatsapp
