@@ -317,12 +317,12 @@ class Message(object):
         :param content_type: The content_type of this Message.  # noqa: E501
         :type: str
         """
-        allowed_values = ["text", "location"]  # noqa: E501
-        if content_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `content_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(content_type, allowed_values)
-            )
+        # allowed_values = ["text", "location"]  # noqa: E501
+        # if content_type not in allowed_values:
+        #     raise ValueError(
+        #         "Invalid value for `content_type` ({0}), must be one of {1}"  # noqa: E501
+        #         .format(content_type, allowed_values)
+        #     )
 
         self._content_type = content_type
 

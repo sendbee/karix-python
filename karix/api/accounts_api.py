@@ -199,6 +199,8 @@ class AccountsApi(object):
             query_params.append(('offset', params['offset']))  # noqa: E501
         if 'limit' in params:
             query_params.append(('limit', params['limit']))  # noqa: E501
+        if 'name' in params:
+            query_params.append(('limit', params['limit']))  # noqa: E501
 
         header_params = {}
         if 'api_version' in params:
