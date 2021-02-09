@@ -18,6 +18,7 @@ import json
 import logging
 import re
 import ssl
+import time
 
 import certifi
 # python 2 and python 3 compatibility library
@@ -107,7 +108,7 @@ class RESTClientObject(object):
 
     def request(self, method, url, query_params=None, headers=None,
                 body=None, post_params=None, _preload_content=True,
-                _request_timeout=None):
+                _request_timeout=None, failover=None):
         """Perform requests.
 
         :param method: http request method
@@ -225,6 +226,20 @@ class RESTClientObject(object):
             logger.debug("response body: %s", r.data)
 
         if not 200 <= r.status <= 299:
+
+            if r.status == 500 and r.reason == 'internal server error':
+                if failover is None:
+                    failover = 1
+                else:
+                    failover += 1
+
+                if failover < 5:
+                    time.sleep(1)
+                    return self.request(
+                        method, url, query_params, headers, body,
+                        post_params, _preload_content, _request_timeout,
+                        failover)
+
             raise ApiException(http_resp=r)
 
         return r
