@@ -228,7 +228,8 @@ class RESTClientObject(object):
         if not 200 <= r.status <= 299:
 
             reason = r.reason.lower()
-            if r.status == 500 and reason == 'internal server error':
+            if (r.status == 500 and reason == 'internal server error') or \
+                    (r.status == 402 and reason == 'insufficient credits'):
                 if failover is None:
                     failover = 1
                 else:
